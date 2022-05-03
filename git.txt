@@ -16,3 +16,6 @@ git branch feature
 git branch
 git checkout feature
 gedit git.txt
+git add .
+git commit
+git status
