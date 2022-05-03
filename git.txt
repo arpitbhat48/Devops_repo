@@ -1,0 +1,33 @@
+git config --global user.name "Arpit Bhat"
+git config --global user.email "arpitbhat48@gmail.com"
+git config --global -l
+mkdir devops_pracs
+
+git init
+ls -a
+git status
+touch git.txt
+git status
+git add .
+git status
+git commit -m "First Commit"
+git log
+
+git branch
+git branch feature
+git branch
+git checkout feature
+gedit git.txt
+git add .
+git commit
+git status
+git log
+
+git checkout master
+git log
+git status
+git merge feature
+git branch -d feature
+git log
+
+git remote add origin https://github.com/arpitbhat48/Devops_repo.git

@@ -1,0 +1,52 @@
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce
+sudo docker version
+sudo systemctl status docker
+
+sudo docker run hello-world
+sudo docker search ubuntu
+sudo docker pull ubuntu
+
+sudo docker run -it ubuntu
+	apt update
+
+
+sudo docker images
+
+mkdir dockerfile
+cd dockerfile
+nano a.html
+nano dockerfile
+
+// Dockerfile
+FROM ubuntu
+RUN apt update
+RUN apt -y install apache2
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+ENV name devops intellipath
+
+FROM node:alpine
+COPY . /app
+WORKDIR /app
+CMD node app.js
+//Dockerfile
+
+sudo docker build . -t hello-docker
+sudo docker images
+sudo docker run hello-docker
+
+sudo docker run -it -d new_dockerfile
+
+
+sudo docker images
+sudo docker ps
+
+sudo docker stop <docker-id>
+sudo docker rm <docker-id>
+
+sudo docker image rm -f <image-id>
